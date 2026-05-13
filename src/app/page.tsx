@@ -454,7 +454,6 @@ export default function Home() {
               { name: "Framer Motion", color: "bg-pink-500/10 text-pink-300 border-pink-500/25" },
               { name: "Tailwind CSS v4", color: "bg-sky-500/10 text-sky-300 border-sky-500/25" },
               { name: "Webhooks", color: "bg-orange-500/10 text-orange-300 border-orange-500/25" },
-              { name: "ngrok", color: "bg-purple-500/10 text-purple-300 border-purple-500/25" },
               { name: "Vercel", color: "bg-slate-400/10 text-slate-300 border-slate-400/25" },
               { name: "Axios", color: "bg-teal-500/10 text-teal-300 border-teal-500/25" },
             ].map((t, i) => (
@@ -481,10 +480,10 @@ export default function Home() {
 
           <div className="space-y-3">
             {[
-              { n: 1, title: "Clone and install", code: "git clone <your-repo>\nnpm install", accent: "bg-cyan-500" },
-              { n: 2, title: "Set environment variables (.env.local)", code: "OPENROUTER_API_KEY=sk-or-...\nLINQ_API_TOKEN=...\nLINQ_PHONE_NUMBER=+1650...", accent: "bg-purple-500" },
-              { n: 3, title: "Run locally and tunnel with ngrok", code: "npm run dev\nngrok http 3000", accent: "bg-emerald-500" },
-              { n: 4, title: "Configure Linq webhook", code: "URL: https://<ngrok-id>.ngrok-free.app/api/webhook\nEvent: message.received", accent: "bg-orange-500" },
+              { n: 1, title: "Clone the public repo", code: "git clone https://github.com/SairamVarma07/linq-ai-assistant.git\ncd linq-ai-assistant\nnpm install", accent: "bg-cyan-500" },
+              { n: 2, title: "Import the repo in Vercel", code: "Vercel → Add New Project\nImport: SairamVarma07/linq-ai-assistant", accent: "bg-purple-500" },
+              { n: 3, title: "Add environment variables in Vercel", code: "OPENROUTER_API_KEY=sk-or-...\nLINQ_API_TOKEN=...\nLINQ_PHONE_NUMBER=+1650...", accent: "bg-emerald-500" },
+              { n: 4, title: "Configure Linq webhook", code: "URL: https://<your-vercel-domain>.vercel.app/api/webhook\nEvent: message.received", accent: "bg-orange-500" },
             ].map((s, i) => (
               <FadeIn key={s.n} delay={i * 0.08}>
                 <div className="rounded-xl border border-white/[0.07] bg-white/[0.02] overflow-hidden hover:border-white/[0.12] transition-colors">
@@ -533,7 +532,7 @@ export default function Home() {
             <span>Linq AI Assistant · Linq Candidate Technical Challenge</span>
           </div>
           <div className="flex gap-5">
-            {[["Linq", "https://linqapp.com"], ["OpenRouter", "https://openrouter.ai"], ["GitHub", "https://github.com"], ["Vercel", "https://vercel.com"]].map(([name, href]) => (
+            {[["Linq", "https://linqapp.com"], ["OpenRouter", "https://openrouter.ai"], ["GitHub", "https://github.com/SairamVarma07/linq-ai-assistant"], ["Vercel", "https://vercel.com"]].map(([name, href]) => (
               <a key={name} href={href} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">{name}</a>
             ))}
           </div>
